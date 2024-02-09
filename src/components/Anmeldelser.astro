@@ -1,0 +1,19 @@
+---
+const {header, text, name} = Astro.props;
+---
+
+<div class="">
+<h6 class="text-lg text-zinc-400 font-semibold pr-2 pt-4">{header}</h6>
+<p class="pt-2 text-zinc-100">{text}</p>
+<p class="pt-3 text-zinc-300 font-semibold">{name}</p>
+</div>
+
+<script>
+	import {inView} from "motion";
+	const slideInLeft = document.querySelector(".slideInLeft");
+
+	inView(slideInLeft, () => {
+		slideInLeft.classList.add("animate__animated", "animate__slideInLeft");
+	})
+
+</script>

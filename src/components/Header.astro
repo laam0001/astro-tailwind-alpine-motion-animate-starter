@@ -1,5 +1,29 @@
 ---
 ---
-<div>
-Header
+
+<div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full bg-slate-800 overflow-hidden" >
+    <div id="navbar" class="flex flex-row justify-between ">
+        <div id="logo" class="text-orange-300 font-light pl-4">
+            <a href="#link1">Site logo</a>
+        </div>
+        <nav id="desktopmenu" class="hidden lg:block">
+            <ul class="flex flex-row gap-16 pr-10 text-orange-300 font-light">
+                <li class="hover:text-orange-500"><a href="#link1">Københavnerbillede</a></li>
+                <li class="hover:text-orange-500"><a href="#link2">Bogens indhold</a></li>
+                <li class="hover:text-orange-500"><a href="#link3">Forfatteren</a></li>
+                <li class="hover:text-orange-500"><a href="#link4">Køb nu</a></li>
+            </ul>
+        </nav>
+        <button id="burgermenu" class="lg:hidden text-orange-300 hover:text-orange-500 font-light pr-4" x-on:click="showmenu = ! showmenu">Menu</button>
+    </div>
+    <nav id="mobilmenu" class="flex flex-col content-center pt-4" 
+    x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+        <ul class="text-orange-300 font-light">
+            <li class="text-center py-4 hover:text-orange-500"><a href="#link1">Københavnerbillede</a></li>
+            <li class="text-center py-4 hover:text-orange-500"><a href="#link2">Bogens indhold</a></li>
+            <li class="text-center py-4 hover:text-orange-500"><a href="#link3">Forfatteren</a></li>
+            <li class="text-center py-4 hover:text-orange-500"><a href="#link4">Køb nu</a></li>
+        </ul>
+    </nav>
 </div>
+

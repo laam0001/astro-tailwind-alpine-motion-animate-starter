@@ -1,9 +1,297 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import Ombogen from '../components/Ombogen.astro';
+import Kapitler from "../components/Kapitler.astro";
+import Anmeldelser from "../components/Anmeldelser.astro";
+import Foto from "../components/Foto.astro";
 ---
 <MainLayout title="Titel">
 	<article>
-		<p>Index indhold</p>
+	
+		<div class="pt-20 grid lg:grid-cols-3 gap-6 lg:pt-24 px-10 lg:px-16">
+			<img class="col-span-2" src="./public/kobenhavnerbilleder-sten-simons.jpg" alt="Københavnerbilleder af Sten Simons">
+			
+			<div>
+				<h1 class="text-3xl text-orange-400 font-black">Københavnerbilleder </h1>
+				<h2 class="text-xl text-slate-700 font-semibold"> - en guide til hipster foto af Sten Simons</h2>
+				<p class="pt-2 pb-5 text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, beatae fuga. Debitis earum excepturi optio sunt mollitia porro quae? Corporis harum dolores deleniti? Voluptatibus excepturi, suscipit magni at nihil cum!</p>
+				<Button variant="primary">Køb bogen her</Button>
+			</div>
+		</div>
+
+		<div class="grid lg:grid-cols-2 lg:py-10 px-10 lg:px-16">
+			<div class="pb-2 pt-12 lg:pt-0 lg:pr-10">
+				<h3 class="text-2xl text-orange-400 font-semibold pb-3">Stamdata for bogen</h3>
+
+				<p class="text-slate-700 font-semibold float-left pr-2">Titel: </p>
+				<p>Københavnerbilleder -en guide til hipster foto</p>
+
+				<p class="text-slate-700 font-semibold float-left pr-2">Forfatter:</p>
+				<p>Sten Simons</p>
+
+				<p class="text-slate-700 font-semibold float-left pr-2">Antal sider:</p>
+				<p>344</p>
+
+				<p class="text-slate-700 font-semibold float-left pr-2">Forlag:</p>
+				<p>Mellem Linjerne</p>
+
+				<p class="text-slate-700 font-semibold float-left pr-2">ISBN:</p>
+				<p>987-6-987654-32-1</p>
+
+				<p class="text-slate-700 font-semibold float-left pr-2">Pris:</p>
+				<p>399.-</p>
+			</div>
+
+			<div class="pt-4 lg:pt-0 pb-10 ">
+				<h3 class="text-2xl text-orange-400 font-semibold pb-3">Kort om bogen</h3>
+				<p>Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!</p>
+			</div>
+		</div>
+
+		<div class="grid lg:grid-cols-3 gap-6 px-10 lg:px-16 overflow-hidden lg:gap-6">
+			<Ombogen img="./public/kbh1.jpg" alt="Om at skyde sort/hvid"></Ombogen>
+			<Ombogen img="./public/kbh2.jpg" alt="Om at skyde street"></Ombogen>
+			<Ombogen img="./public/kobenhavnerbilleder-sten-simons.jpg" alt="Københavnerbilleder af Sten Simons"></Ombogen>
+		</div>
+
+		<div>
+			<h3 class="text-2xl text-orange-400 font-semibold pt-10 pb-3 px-10 lg:px-16">Bogens kapitler</h4>
+		</div>
+
+		<div class="grid lg:grid-cols-2 gap-8 lg:gap-16 pb-10 px-10 lg:px-16">
+			<Kapitler header="Kapitel 1 - Intro til street foto" text="Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban geometry). I dette kapitel får du en grundig intro til hvad street foto er og et overblik over nogen af de kendte street-fotografer. Alt krydret med en masse gode eksempler på street fotos."></Kapitler>
+			
+			<Kapitler header="Kapitel 2 - Om at skyde street" text="Vil du skyde street? Så er der ikke nogen vej udenom: Du skal ud på gaderne og prøve det! I dette kapitel får du en teknisk indføring i hvordan du bedst skyder street. Uanset om du er begynder eller professionel, er der mange gode tekniske tips og tricks til street-skyderiet."></Kapitler>
+
+			<Kapitler header="Kapitel 3 - Om at finde det rette motiv" text="Indimellem er man heldig, andre gange kommer man hjem helt uden gode motiver. Med et par tips og tricks til at finde de rette motiver, stiger chancen gevaldigt for at fange de gode motiver."></Kapitler>
+
+			<Kapitler header="Kapitel 4 - Digital street foto" text="De fleste af os skyder oftest digitalt fordi det er billigere og nemmere. Og nogen teknikker og fremgangsmåder egner sig kun til digital street foto. I dette kapitel får du en række tips og tricks til digital street-foto. "></Kapitler>
+
+			<Kapitler header="Kapitel 5 - Analog street foto" text="Analog er sejt fordi det er mere “ægte,” dyrere og mere besværligt end digital. Det signalerer entusiasme. Nogle teknikker og fremgangsmåder egner sig bedst til analog street foto. I dette kapitel får du en række tips og tricks til analog street-foto."></Kapitler>
+
+			<Kapitler header="Kapitel 6 - Om at skyde sort/hvid" text="Alle street-fotografer skyder sort/hvid nu og da. Nogen altid. Hvorfor? Hvad er der specielt ved sort/hvid fotografering, og hvad adskiller sort/hvid fra farvefotografering? Her får du en række tips og tricks til sort/hvid fotografering."></Kapitler>
+
+			<Kapitler header="Kapitel 7 - Kreative teknikker" text="Dobbelteksponeringer, ICM (intentional camera moves), smadrede objektiver, gamle filmruller og alle mulige andre, spændende kreative teknikker kan løfte dine fotografier fra at være kedelige dokumentationer af hverdagen til at blive vilde kunststykker. Så dyk ned i dette kapitel om eksperimenterende teknikker!"></Kapitler>
+
+			<Kapitler header="Kapitel 8 - Kom helt tæt på!" text="Street foto handler om at fotografere livet på gaden - men tør du at gå helt tæt på fremmede mennesker og knipse løs? Du kan lige så godt øve dig, for det er det der vil gøre dig til en bedre street-fotograf…"></Kapitler>
+		</div>	
+
+		<section class="bg-slate-800 pb-10 slideInLeft duration-1000 transition delay-1000">
+		<div>
+			<h3 class="text-2xl text-orange-400 font-semibold pt-10 pb-8 px-10 lg:px-16">Anmeldelser af bogen</h6>
+		</div>
+
+		<div class="grid lg:grid-cols-3 gap-16 lg:gap-24 px-10 lg:px-16">
+
+			<div>
+				<div class="grid grid-cols-6 w-48 lg:w-64">
+					<img class="" src="./public/Star.svg" alt="Stjerne">
+					<img src="./public/Star.svg" alt="Stjerne">
+					<img src="./public/Star.svg" alt="Stjerne">
+					<img src="./public/Star.svg" alt="Stjerne">
+					<img src="./public/Star.svg" alt="Stjerne">
+					<img src="./public/Star2.svg" alt="Stjerne">
+				</div>
+			
+				<div>
+				<Anmeldelser header="5 af 6 stjerner" text="Københavnerbilleder er en grundig 	introduktion til at skyde billeder med retro-kant. Hvad enten du er har arbejdet med 	foto siden 135-filmen kom på markedet, du kun har skudt digitalt eller er helt 	nybegynder, er der masser af tips og tricks i bogen." name="-Hanne Hovgaard,Berlingeren"></Anmeldelser>
+				</div>
+			</div>
+
+			<div>
+				<div class="grid grid-cols-6 w-48 lg:w-64">
+					<img src="./public/Star.svg" alt="Stjerne">
+					<img src="./public/Star.svg" alt="Stjerne">
+					<img src="./public/Star.svg" alt="Stjerne">
+					<img src="./public/Star.svg" alt="Stjerne">
+					<img src="./public/Star2.svg" alt="Stjerne">
+				</div>
+			
+				<div>
+				<Anmeldelser header="4 af 5 stjerner" text="Teksten er underholdende, og billederne er sku' flotte. Hvad mere skal man sige om en fotobog?" name="-Kim Kloggaard, Fotojournalen.dk"></Anmeldelser>
+				</div>
+			</div>
+
+			<div>
+				<div class="grid grid-cols-6 w-48 lg:w-64">
+					<img src="./public/Star.svg" alt="Stjerne">
+					<img src="./public/Star.svg" alt="Stjerne">
+					<img src="./public/Star.svg" alt="Stjerne">
+					<img src="./public/Star.svg" alt="Stjerne">
+					<img src="./public/Star.svg" alt="Stjerne">
+					<img src="./public/Star.svg" alt="Stjerne">
+				</div>
+			
+				<div>
+				<Anmeldelser header="6 af 6 stjerner" text="Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste - her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.” Tillykke - godt arbejde." name="-Volmer Hansen, Lukkertiden.dk"></Anmeldelser>
+				</div>
+			</div>
+		</section>
+		
+		<h3 class="text-2xl text-orange-400 font-semibold pt-10 pb-8 px-10 lg:px-16">Udvalgte billeder fra bogen</h3>
+		<div class="lg:flex flex-row justify-center px-10 lg:px-16 gap-6 pt-0">
+		<div>
+			<Foto img1="./public/7.jpg" alt="bil" img2="./public/9.jpg" alt="trappe" img3="./public/3.jpg" alt="Græs" img4="./public/6.jpg"></Foto>
+		</div>
+
+		<div>
+			<Foto img1="./public/1.jpeg" alt="bil" img2="./public/2.jpeg" alt="trappe" img3="./public/5.jpg" alt="Græs" img4="./public/4.jpg"></Foto>
+		</div>
+
+		<div>
+			<Foto img1="./public/8.jpg" alt="bil" img2="./public/11.jpg" alt="trappe" img3="./public/10.jpg" alt="Græs" img4="./public/16.jpg"></Foto>
+		</div>
+
+		<div>
+			<Foto img1="./public/12.jpg" alt="bil" img2="./public/13.jpg" alt="trappe" img3="./public/14.jpg" alt="Græs" img4="./public/15.jpg"></Foto>
+		</div>
+	</div>
+
+	<section>
+		<h3 class="text-2xl text-orange-400 font-semibold pt-20 pb-2 px-10 lg:px-44">Forfatteren</h1>
+
+	<div class="px-10 pt-2 grid lg:grid-cols-2 lg:gap-6 lg:justify-center">
+		<div>
+			<img class="pb-4 lg:pl-36" src="./public/sten_simons.jpg" alt="Sten Simons">
+		</div>
+		<div class="lg:pr-48">
+			<p>Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.” </p><br>
+
+			<p>Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.</p>
+
+		</div>
+	</div>
+	</section>
+
+	<section class="bg-orange-300 rounded-2xl mx-4 mt-10 lg:mx-16 overflow-hidden">
+		<h3 class="text-2xl text-slate-700 font-bold pt-10 pb-6 px-10 lg:text-center lg:text-3xl zoomIn">Køb Københavnerbilleder nu!</h3>
+		<form class="px-16 gap-2 grid grid-cols-1 lg:px-36 lg:grid-cols-2 lg:gap-4 text-md text-slate-700 font-bold">
+
+			<div class="grid gap-3 lg:col-span-2">
+			  <label for="number">Antal</label>
+			  <input class="text-slate-500 font-medium rounded-xl border-0" 
+			  type="number" 
+			  id="number" 
+			  name="number" />
+			</div>
+	  
+			<div class="grid gap-3">
+			  <label for="firstname">Fornavn</label>
+			  <input class="text-slate-500 font-medium rounded-xl border-0"
+				type="text"
+				id="firstname"
+				name="firstname"
+				placeholder="Ib"
+			  />
+			</div>
+	  
+			<div class="grid gap-3">
+			  <label for="lastname">Efternavn</label>
+			  <input class="text-slate-500 font-medium rounded-xl border-0"
+				type="text"
+				id="lastname"
+				name="lastname"
+				placeholder="Hansen"
+			  />
+			</div>
+	  
+			<div class="grid gap-3">
+			  <label for="email">Email adresse</label>
+			  <input class="text-slate-500 font-medium rounded-xl border-0"
+				type="email"
+				id="email"
+				name="email"
+				placeholder="Ib@example.com"
+			  />
+			</div>
+	  
+			<div class="grid gap-3">
+			  <label for="adress">Adresse</label>
+			  <input class="text-slate-500 font-medium rounded-xl border-0"
+				type="text"
+				id="adress"
+				name="adress"
+				placeholder="Paradisæblevej 8"
+			  />
+			</div>
+	  
+			<div class="grid gap-3">
+			  <label for="postnummer">Postnummer</label>
+			  <input class="text-slate-500 font-medium rounded-xl border-0"
+				type="text"
+				id="postnummer"
+				name="postnummer"
+				placeholder="0900"
+			  />
+			</div>
+			
+			<div class="grid gap-3">
+			  <label for="by">By</label>
+			  <input class="text-slate-500 font-medium rounded-xl border-0"
+			  type="text" 
+			  id="by" 
+			  name="by" 
+			  placeholder="Andeby C" />
+			</div>
+	  
+			<div class="grid gap-3">
+			  <label for="tel">Telefonnummer</label>
+			  <input class="text-slate-500 font-medium rounded-xl border-0"
+			  type="tel" 
+			  id="tel" name="tel" 
+			  placeholder="555-555" />
+			</div>
+	  
+			<div class="pt-6 pb-2 lg:pl-2">
+			  <label for="levering">PostNord</label>
+			  <input class="border-0"
+			  type="radio" 
+			  id="PostNord" 
+			  name="PostNord" />
+	  
+			  <label for="levering">GLS</label>
+			  <input class="border-0"
+			  type="radio" 
+			  id="GLS" 
+			  name="GLS"/>
+	  
+			  <label for="levering">Bring</label>
+			  <input class="border-0"
+			  type="radio" 
+			  id="Bring" 
+			  name="Bring" />
+			</div>
+	  
+			<div class="lg:pt-10 lg:px-28">
+			  <input class="rounded-md border-0"
+			  type="checkbox" 
+			  id="nyhed" 
+			  name="nyhed" />
+			  <label for="nyhed">Nyhedsbrev</label>
+			</div>
+		</form>
+	  
+			<div class="px-16 pb-10 pt-10 grid grid-cols-1 lg:grid lg:grid-cols-1 lg:px-64">
+			  <Button variant="secondary" type="Submit" id="submit" name="submit">Submit</button>
+			</div>	
+	</section>
 	</article>
 </MainLayout>
+
+<style>
+	.minegenclass{
+		animation: zoomIn;
+		animation-duration: 2s;
+	}
+</style>
+
+<script>
+	import {inView} from "motion";
+	const zoomIn = document.querySelector(".zoomIn");
+
+	inView(zoomIn, () => {
+		zoomIn.classList.add("animate__animated", "animate__zoomIn");
+	})
+
+</script>
